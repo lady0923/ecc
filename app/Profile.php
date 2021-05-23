@@ -9,8 +9,7 @@ class Profile extends Model
     protected $guarded = array('id');
     
     public static $rules = array(
-        'lastname' => 'required',
-        'firstname' => 'required',
+        'name' => 'required',
         'gender' => 'required',
         'school' => 'required',
         'zipcode' => 'required',

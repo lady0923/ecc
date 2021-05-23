@@ -67,6 +67,9 @@
                 <div id="wrapper">
                     <div class="left-column">
                         <p>menu</p>
+                        <a href="{{ action('Admin\EccController@add') }}">生徒登録</a><br>
+                        <a href="{{ action('Admin\EccController@index') }}">生徒一覧</a><br>
+                        <a href="">レッスンスケジュール</a>
                     </div>
                     <div class="right-column">
                         <p>@yield('content')</p>

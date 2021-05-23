@@ -29,4 +29,15 @@ class EccController extends Controller
         
         return redirect('admin/eccprofile/create');
     }
+    
+    public function index(Request $request)
+    {
+        $cond_name = $request->cond_name;
+        if ($cond_name != '') {
+            $posts = Profile::where('name', $cond_name)->get();
+        } else {
+            $posts = Profile::all();
+        }
+        return view('admin.profile.index', ['posts' => $posts, 'cond_name' => $cond_name]);
+    }
 }
