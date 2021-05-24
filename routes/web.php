@@ -24,6 +24,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'],function() {
     Route::get('ecc/delete', 'Admin\EccController@delete');
 });
 
+Route::get(['prefix' => 'admin', 'middleware' => 'auth'],function() {
+    Route::get('ecc/test', 'Admin\EcctestController@add');
+});
 
 Auth::routes();
 
