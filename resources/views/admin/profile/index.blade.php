@@ -58,6 +58,14 @@
                             <td>{{ \Str::limit($profile->corse, 100) }}</td>
                             <td>{{ \Str::limit($profile->week, 100) }}</td>
                             <td>{{ \Str::limit($profile->time, 100) }}</td>
+                            <td>
+                                <div>
+                                    <a href="{{ action('Admin\EccController@edit', ['id' => $profile->id]) }}">編集</a>
+                                </div>
+                                <div>
+                                    <a href="{{ action('Admin\EccController@delete', ['id' => $profile->id]) }}">削除</a>
+                                </div>
+                            </td>
                         </tr>
                         @endforeach
                     </tbody>
@@ -66,3 +74,4 @@
         </div>
     </div>
 </div>
+@endsection

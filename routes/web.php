@@ -16,9 +16,12 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'],function() {
-    Route::get('eccprofile/create','Admin\EccController@add');
-    Route::post('eccprofile/create', 'Admin\EccController@create');
-    Route::get('eccprofile', 'Admin\EccController@index');
+    Route::get('ecc/create','Admin\EccController@add');
+    Route::post('ecc/create', 'Admin\EccController@create');
+    Route::get('ecc', 'Admin\EccController@index');
+    Route::get('ecc/edit', 'Admin\EccController@edit');
+    Route::post('ecc/edit', 'Admin\EccController@update');
+    Route::get('ecc/delete', 'Admin\EccController@delete');
 });
 
 
