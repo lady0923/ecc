@@ -39,3 +39,18 @@ body {
   background-color: rgba(0, 0, 0, 0.25);
 }
 
+#wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left-column {
+  width: 20%;
+}
+
+.right-column {
+  width: 80%;
+}
+

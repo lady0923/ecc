@@ -24,8 +24,12 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'],function() {
     Route::get('ecc/delete', 'Admin\EccController@delete');
 });
 
-Route::get(['prefix' => 'admin', 'middleware' => 'auth'],function() {
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'],function() {
     Route::get('ecc/test', 'Admin\EcctestController@add');
+    Route::post('ecc/test', 'Admin\EcctestController@create');
+    Route::get('ecc/testindex', 'Admin\EcctestController@index');
+    Route::get('ecc/edit', 'Admin\EcctestController@edit');
+    Route::post('ecc/edit', 'Admin\EcctestController@update');
 });
 
 Auth::routes();

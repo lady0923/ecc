@@ -49,7 +49,7 @@
                         <tr>
                             <th>{{ $profile->id }}</th>
                             <td>{{ \Str::limit($profile->name, 100) }}</td>
-                            <td>{{ \Str::limit($profile->year, 100) }}</td>
+                            <td>{{ \Str::limit($profile->birthday, 100) }}</td>
                             <td>{{ \Str::limit($profile->gender, 100) }}</td>
                             <td>{{ \Str::limit($profile->school, 100) }}</td>
                             <td>{{ \Str::limit($profile->zipcode, 100) }}</td>
