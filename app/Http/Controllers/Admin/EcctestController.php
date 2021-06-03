@@ -9,9 +9,11 @@ use App\Test;
 
 class EcctestController extends Controller
 {
-    public function add()
+    public function add(Request $request)
     {
-        return view('admin.test.create');
+        $profile_form = $request->all();
+        $profile_id = $profile_form['id'];
+        return view('admin.test.create', ['profile_id' => $profile_id]);
     }
     
     public function create(Request $request)
@@ -31,8 +33,10 @@ class EcctestController extends Controller
     
     public function index(Request $request)
     {
-        $posts = Test::all();
-        return view('admin.test.index', ['posts' => $posts]);
+        
+        $tests = Test::all();
+        return view('admin.test.index')->with('tests', $tests);
+    
     }
     
     public function edit(Request $request)

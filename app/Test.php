@@ -9,8 +9,14 @@ class Test extends Model
     protected $guarded = array('id');
     
     public static $rules = array(
-        'test' => 'required',
-        'testday' => 'required',
-        'score' => 'required',
+        'test_sbt' => 'required',
+        'profile_id' => 'required',
+        'test_date' => 'required',
+        'score' => 'required|integer',
         );
+        
+    public function profile()
+    {
+        return $this->belongsTo('App\Profile');
+    }
 }

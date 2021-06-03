@@ -19,14 +19,14 @@
                 <div class="form-group row">
                     <label class="col-md-2">テスト種別</label>
                     <div class="col-md-10">
-                        <input type="radio" name="test" value="monthly">&nbsp;月１テスト&nbsp;&nbsp;&nbsp;
-                        <input type="radio" name="test" value="yearly">&nbsp;実力テスト&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="test_sbt" value="月１テスト">&nbsp;月１テスト&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="test_sbt" value="実力テスト">&nbsp;実力テスト&nbsp;&nbsp;&nbsp;
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-md-2">実施日</label>
                     <div class="col-md-10">
-                        <input type="date" name="testday" value="{{ old('testday') }}">
+                        <input type="date" name="test_date" value="{{ old('test_date') }}">
                     </div>
                 </div>
                 <div class="form-group row">
@@ -35,6 +35,7 @@
                         <input type="number" name="score" value="{{ old('score') }}">
                     </div>
                 </div>
+                <input type="hidden" name="profile_id" value="{{ $profile_id }}">
                 {{csrf_field() }}
                 <input type="submit" class="btn btn-primary" value="登録"> 
             </form>

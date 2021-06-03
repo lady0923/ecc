@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 
 use App\Profile;
 
+use App\Test;
+
 class EccController extends Controller
 {
     //

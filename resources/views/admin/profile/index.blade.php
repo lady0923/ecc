@@ -36,12 +36,13 @@
                             <th width="5%">年齢</th>
                             <th width="5%">性別</th>
                             <th width="10%">学校名</th>
-                            <th width="10%">郵便番号</th>
-                            <th width="15%">住所</th>
+                            <th width="9%">郵便番号</th>
+                            <th width="16%">住所</th>
                             <th width="10%">電話番号</th>
                             <th width="5%">コース</th>
                             <th width="5%">曜日</th>
                             <th width="5%">時間</th>
+                            <th width="15%"></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -64,6 +65,12 @@
                                 </div>
                                 <div>
                                     <a href="{{ action('Admin\EccController@delete', ['id' => $profile->id]) }}">削除</a>
+                                </div>
+                                <div>
+                                    <a href="{{ action('Admin\EcctestController@add', ['id' => $profile->id]) }}">テスト結果入力</a>
+                                </div>
+                                <div>
+                                    <a href="{{ action('Admin\EcctestController@index', ['id' => $profile->id]) }}">テスト結果一覧</a>
                                 </div>
                             </td>
                         </tr>

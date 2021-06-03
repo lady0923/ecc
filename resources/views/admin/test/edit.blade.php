@@ -17,14 +17,14 @@
                 <div class="form-group row">
                     <label class="col-md-2" for="test">テスト種別</label>
                     <div class="col-md-10">
-                        <input type="radio" name="test" value="monthly" @if($test_form->test == "monthly") checked @endif>&nbsp;月１テスト&nbsp;&nbsp;&nbsp;
-                        <input type="radio" name="test" value="yearly" @if($test_form->test == "yearly") checked @endif>&nbsp;実力テスト&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="test_sbt" value="月１テスト" @if($test_form->test == "月１テスト") checked @endif>&nbsp;月１テスト&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="test_sbt" value="実力テスト" @if($test_form->test == "実力テスト") checked @endif>&nbsp;実力テスト&nbsp;&nbsp;&nbsp;
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-md-2" for="testday">実施日</label>
+                    <label class="col-md-2" for="test_date">実施日</label>
                     <div class="col-md-10">
-                        <input type="date" name="testday" value="{{ $test_form->testday }}">
+                        <input type="date" name="test_date" value="{{ $test_form->test_date }}">
                     </div>
                 </div>
                 <div class="form-group row">
@@ -35,7 +35,7 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-md-10"> 
-                        <input type="hidden" name="id" value="{{ $test_form->id }}">
+                        <input type="hidden" name="profile_id" value="{{ $test_form->profile_id }}">
                         {{ csrf_field() }}
                         <input type="submit" class="btn btn-primary" value="更新">
                     </div>

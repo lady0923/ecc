@@ -21,4 +21,10 @@ class Profile extends Model
         'time' => 'required',
         'color' => 'required',
         );
+        
+    public function test()
+    {
+        return $this->hasMany('App\Test');
+    }
+    
 }

@@ -26,11 +26,12 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($posts as $test)
+                        @foreach ($tests as test)
+                        {{ $test->profile->profile_id." ".$test->id }}
                         <tr>
                             <th>{{ $test->id }}</th>
-                            <td>{{ \Str::limit($test->test, 100) }}</td>
-                            <td>{{ \Str::limit($test->testday, 100) }}</td>
+                            <td>{{ \Str::limit($test->test_sbt, 100) }}</td>
+                            <td>{{ \Str::limit($test->test_date, 100) }}</td>
                             <td>{{ \Str::limit($test->score, 100) }}</td>
                             <td>
                                 <div>
